@@ -1,0 +1,41 @@
+<div class="list-wrapper">
+  <div class="list">
+    <div>
+      <h2>Events</h2>
+      <div class="list-header">
+          <div class="li-item">MDA</div>
+          <div class="li-item">DATE</div>
+          <div class="li-item">Mechanisem</div>
+          <div class="li-item">Kinetic</div>
+      </div>
+      <ul class="treated">
+        <li *ngFor="let accident of treatedAccidentsArray" class="single-accident" [routerLink]="'../singleAccident/' + accident.MDA"> 
+            <div class="li-item">{{accident.MDA}}</div>
+            <div class="li-item">{{accident.EventTime | date}}</div>
+            <div class="li-item">{{accident.mechanism}}</div>
+            <div class="li-item">{{accident.kinematic}}</div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>Diagnosed</h2>
+      <div class="list-header">
+          <div class="li-item">MDA</div>
+          <div class="li-item">DATE</div>
+          <div class="li-item">Mechanisem</div>
+          <div class="li-item">Kinetic</div>
+      </div>
+      <ul class="untreated">
+        <li  *ngFor="let accident of unTreatedAccidentsArray" class="single-accident" [routerLink]="'../singleAccident/' + accident.MDA"> 
+            <div class="li-item">{{accident.MDA}}</div>
+            <div class="li-item">{{accident.EventTime | date}}</div>
+            <div class="li-item">{{accident.mechanism}}</div>
+            <div class="li-item">{{accident.kinematic}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="side">
+    <h3>some aside content</h3>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+nav{
+    padding:1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: whitesmoke;
+}
+nav i{
+    height:1em;
+}
+nav i.animated{
+    display :none;
+    animation: spinning 2s infinite linear;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    padding:1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: center;
+}
+nav ul li:hover{
+    box-shadow: black 1px 1px 1px 0px;
+}
+
+@media only screen and (max-width:768px){
+    nav i.animated{
+        display: inline-block;
+    }
+}
+
+@keyframes spinning{
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+}

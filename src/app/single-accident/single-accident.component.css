@@ -1,0 +1,55 @@
+.accident-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    height:100%;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.accident-wrapper ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+li.list-item{
+    padding:1rem;
+}
+li.list-item.high{
+    order:-1;
+    position: relative;
+}
+
+li.list-item.medium{
+    order:+1;
+   position: relative;
+}
+
+li.list-item.low{
+    order:+2;
+    position: relative;
+}
+.high i , .low i, .medium i{
+    position:absolute;
+    top:1.2rem;
+    left: -1.2rem;;
+}
+.high i{
+    color:red
+}
+.medium i{
+    color:blue
+}
+.low i{
+    left: -1.2rem;;
+}
+
+agm-map{
+    height:100%;
+}
+
+@media only screen and (max-width:1024px){
+    .accident-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
