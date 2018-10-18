@@ -13,16 +13,18 @@ export class AccidentListComponent implements OnInit {
   constructor(private service : AccidentsService) { }
 
   ngOnInit() :void{
+    this.service.activateLoader(true);
     this.service.getAccidents().subscribe(res=>{
       this.accidentsArray = res;
       this.splitAccidenteTypes();
-    })
+      this.service.activateLoader(false);
+    });
   }
 
   splitAccidenteTypes():void{
     this.treatedAccidentsArray = this.accidentsArray.filter((accident:Accident)=> accident.isTreated === true);
     this.unTreatedAccidentsArray = this.accidentsArray.filter((accident:Accident)=> accident.isTreated === false);
- 
+
   }
 
 }
