@@ -39,9 +39,6 @@ li.list-item.low{
 .medium i{
     color:blue
 }
-.low i{
-    left: -1.2rem;;
-}
 
 agm-map{
     height:100%;
