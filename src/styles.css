@@ -4,6 +4,10 @@
     padding:0;
     font-family: 'Merriweather Sans', sans-serif;
 }
+.deep-grey-purple{
+    background-color: #222244;
+    opacity :0.9;
+}
 ul{
     list-style: none;
 }

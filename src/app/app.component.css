@@ -12,7 +12,7 @@
 
 .show{
     width:15rem;
-    opacity:1;
+    opacity:0.9;
 }
 hide{
     width:0rem;
@@ -24,7 +24,7 @@ app-header{
 }
 app-side-nav{
     grid-area: side-nav;
-    background-color: darkslateblue;
+    background-color: #222244;
     width:15rem;
     transition: all 1s ease-in-out;
     display: grid;

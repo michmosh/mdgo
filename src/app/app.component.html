@@ -1,7 +1,7 @@
 <div class="container">
-  <app-header (isDashboardOpen)="openDashboard()"></app-header>
-  <app-side-nav (isDashBoardClosed)="openDashboard()"
-                [className]="isDashboardOpen ?  'show' :  'hide'" 
+  <app-header class="deep-grey-purple" (isDashboardOpen)="openDashboard()"></app-header>
+  <app-side-nav (isDashBoardClosed)="openDashboard()" 
+                [ngClass]="{'deep-grey-purple' : true , 'show': isDashboardOpen }" 
                 [isDashboardOpen]="isDashboardOpen"></app-side-nav>
   <app-main>
      
