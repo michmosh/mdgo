@@ -1,8 +1,8 @@
-<div class="accident-wrapper">
+<div *ngIf="accident" class="accident-wrapper">
   <div class="accident-details">
       <h2>{{accident.MDA}}</h2>
     <ul>
-      <li *ngFor="let injurie of accident.injuries" [className]="'list-item ' + injurie.severity">
+      <li *ngFor="let injurie of accident.injuries"  [className]="'list-item ' + injurie.severity">
           <i class="fa fa-eye"></i>
           <h4>{{injurie.location}}</h4>
           <p>{{injurie.description}}</p>

@@ -1,5 +1,4 @@
 import { Component, OnInit , Output , EventEmitter  } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Config } from '../shared/config/config';
 @Component({
   selector: 'app-header',
